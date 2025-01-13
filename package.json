@@ -1,0 +1,12 @@
+{
+  "name": "@thefa/formation-tokens-demo",
+  "description": "Design tokens for the Formation Design System",
+  "version": "0.0.0",
+  "main": "formation.css",
+  "files": [
+    "themes/**",
+    "*.css"
+  ],
+  "author": "The FA Design Team <design@thefa.com>",
+  "license": "MIT"
+}
