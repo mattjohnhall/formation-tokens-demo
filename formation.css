@@ -263,4 +263,5 @@
   --fds-input-disabled-border: var(--fds-color-brand-ef-navy-300);
   --fds-input-disabled-text: var(--fds-text-muted);
   --fds-input-placeholder: var(--fds-color-neutral-grey-600);
+  --fds-border-brand-primary: var(--fds-color-brand-ef-navy-600);
 }
