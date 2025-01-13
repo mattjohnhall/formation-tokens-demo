@@ -8,5 +8,9 @@
     "*.css"
   ],
   "author": "The FA Design Team <design@thefa.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattjohnhall/formation-tokens-demo.git"
+  }
 }
