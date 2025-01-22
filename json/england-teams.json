@@ -235,6 +235,9 @@
     "full": "500rem",
     "none": "0"
   },
+  "tokenSetOrder": [
+    "Tokens"
+  ],
   "surface": {
     "brand": {
       "primary": {
