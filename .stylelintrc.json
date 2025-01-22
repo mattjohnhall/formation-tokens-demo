@@ -1,0 +1,16 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-hex-length": null,
+    "custom-property-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": "Expected custom property name to be kebab-case"
+      }
+    ],
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-pattern": "/foo-.+/"
+  }
+}

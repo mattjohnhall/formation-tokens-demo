@@ -19,6 +19,12 @@ jobs:
         node-version: 20 
         registry-url: https://registry.npmjs.org
 
+    - name: Install Dependencies
+      run: npm clean-install
+
+    - name: Build Tokens
+      run: npm run build:tokens
+
     - name: Publish to NPM
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
