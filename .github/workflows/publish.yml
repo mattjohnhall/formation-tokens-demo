@@ -23,7 +23,7 @@ jobs:
       run: npm clean-install
 
     - name: Build Tokens
-      run: npm run build:tokens
+      run: npm run build
 
     - name: Publish to NPM
       env:
