@@ -2,7 +2,7 @@
   "name": "@thefa/formation-tokens-demo",
   "description": "Design tokens for the Formation Design System",
   "author": "The FA Design Team <design@thefa.com>",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "repository": {
     "type": "git",
