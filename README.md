@@ -15,7 +15,7 @@ yarn add @thefa/formation-tokens-demo
 You can also use the CSS files from Unpkg.
 
 ```html
-<link rel="stylesheet" href="//unpkg.com/@thefa/formation-tokens-demo/0.1.0/css/<theme>.css" />
+<link rel="stylesheet" href="https://unpkg.com/@thefa/formation-tokens-demo@0.1.2/css/<theme>.css" />
 ```
 
 ## Usage
