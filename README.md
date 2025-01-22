@@ -1,54 +1,86 @@
-# @thefa/formation-tokens
+# @thefa/formation-tokens-demo
 
-This package contains design tokens for the Formation Design System
+**[ DEMO ]** This package allows you to import Formation design tokens into your project.
 
 ## Installation
 
-Via NPM
-```
-npm install @thefa/formation-tokens
+```bash
+# If you're using npm:
+npm install --save @thefa/formation-tokens-demo
+
+# OR If you're using yarn:
+yarn add @thefa/formation-tokens-demo
 ```
 
-Via Yarn
-```
-yarn add @thefa/formation-tokens
-```
+You can also use the CSS files from Unpkg.
 
-Via CDN
 ```html
-<link rel="stylesheet" href="//unpkg.com/@thefa/formation-tokens/1.0.0/formation.css" />
-<link rel="stylesheet" href="//unpkg.com/@thefa/formation-tokens/1.0.0/themes/england-football.css" />
+<link rel="stylesheet" href="//unpkg.com/@thefa/formation-tokens-demo/0.1.0/css/<theme>.css" />
 ```
 
 ## Usage
 
-This package adds Formation [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to your `:root {}`.
-
-When importing the package first import the base tokens and then make sure to specify which theme tokens you want to import.
-
-### CSS
-```css
-@import "@thefa/formation-tokens/formation";
-@import "@thefa/formation-tokens/themes/<theme>";
-```
-
-### JSX
-```js
-import '@thefa/formation-tokens/formation.css';
-import "@thefa/formation-tokens/themes/<theme>.css";
-```
+Tokens can be imported as [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) to your `:root {}`, SCSS variables, or as JSON.
 
 All variables are prefixed with `fds`.
 
+### CSS
+
+To make use of the CSS variables, import them into your stylesheet like so:
+
 ```css
-.selector {
-  color: var(--fds-text-general-headline-dark-text);
+/* Inside css */
+@import "@thefa/formation-tokens/css/<theme>.css";
+```
+
+```js
+// For projects where you can import css files into JS
+import "@thefa/formation-tokens/css/<theme>.css";
+```
+
+```css
+.error {
+  color: var(--fds-status-danger);
 }
 ```
 
+### SCSS
+
+To make use of the scss variables, import them into your scss files like so:
+
+```scss
+@use "@thefa/formation-tokens/scss/<theme>";
+```
+
+```css
+.error {
+  color: $fds-status-danger;
+}
+```
+
+#### Common JS module
+
+```js
+const formation = require('@thefa/formation-tokens/json/<theme>')
+
+// Then use in code:
+element.style.color = formation.status.danger
+```
+
+#### ES6 module
+
+```js
+import tokens from "@thefa/formation-tokens/json/<theme>";
+
+// Then use in code:
+element.style.color = formation.status.danger
+```
+
+
+## Themes
+
 Themes currently available:
 
-- `base` (Brand agnostic - for prototyping)
 - `fa`
 - `england-football`
 - `england-teams`
