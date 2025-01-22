@@ -4,7 +4,7 @@ import { register } from '@tokens-studio/sd-transforms';
 import fs from 'fs';
 import path from 'path';
 
-register(StyleDictionary);
+register(StyleDictionary, { excludeParentKeys: true });
 
 const brands = fs.readdirSync(path.resolve('tokens/brands'))
   .filter((file) => file.endsWith('.json'))
@@ -13,6 +13,7 @@ const brands = fs.readdirSync(path.resolve('tokens/brands'))
 brands.forEach((brand) => {
   const formation = new StyleDictionary({
     source: [`tokens/primitives.json`, `tokens/brands/${brand}.json`],
+    preprocessors: ['tokens-studio'],
     platforms: {
       css: {
         buildPath: 'css/',
