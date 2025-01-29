@@ -13,7 +13,7 @@
         "fa-navy": {
           "100": {
             "$type": "color",
-            "$value": "#cdd2d7"
+            "$value": "#ff0000"
           },
           "200": {
             "$type": "color",
